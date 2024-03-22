@@ -5,5 +5,5 @@ const app = express()
 const port = 3000;
 
 app.listen(port, ()=> {
-    console.log(`App runnung on port ${port}` );
+    console.log(`rey on port ${port}` );
 })
