@@ -10,7 +10,12 @@
   <h1>Star Wars Api</h1>
     <form>
         <label for="name"></label>
-        <input type="text" name="name" >
+        <input type="text" name="name">
+        <button>Submit</button>
     </form>
+    <% if (locals.data) { %>
+        <h2> <%= data %> </h2>
+
+    <% } %>
 </body>
 </html>
