@@ -10,3 +10,15 @@ body {
     flex-direction: column;
 }
 
+form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1em;
+}
+
+input {
+    margin: 0.5em;
+    padding: 0.2em;
+}
