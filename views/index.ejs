@@ -7,11 +7,22 @@
     <title>Star Wars Api</title>
 </head>
 <body>
-  <h1>Star Wars Api</h1>
-    <form>
+  <h1>Star Wars-API</h1>
+    <form action="/"  method="post" >
         <label for="name"></label>
         <input type="text" name="name">
-        <button>Submit</button>
+        <select name="type" class="form-select">
+            <option value="" data-display="Select">Random type</option>
+            <option value="planets">Planets</option>
+            <option value="charity">Charity</option>
+            <option value="recreational">Recreational</option>
+            <option value="relaxation">Relaxation</option>
+            <option value="busywork">Busywork</option>
+            <option value="social">Social</option>
+            <option value="diy">DIY</option>
+            <option value="music">Music</option>
+          </select>
+        <button type="submit" >Submit</button>
     </form>
     <% if (locals.data) { %>
         <h2> <%= data %> </h2>

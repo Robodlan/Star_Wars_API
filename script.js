@@ -14,8 +14,8 @@ app.get("/", async (req, res) => {
   try {
     const response = await axios.get(url);
     const result = response.data;
-    
-    res.render("index.ejs", { data: "Show Planet" });
+    console.log(result)
+     res.render("index.ejs", { data: "Show Planet" });
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
@@ -27,10 +27,11 @@ app.get("/", async (req, res) => {
 app.post("/", async (req, res) => {
   try {
 
-    console.log(req.body)
     const response = await axios.get(url);
     const result = response.data;
-    res.redirect("index.ejs", { data: "Show Planet" });
+    
+    
+    res.render("index.ejs", { data: result });
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
