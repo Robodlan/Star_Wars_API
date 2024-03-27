@@ -4,7 +4,7 @@ import axios from "axios";
 
 const app = express()
 const port = 3000;
-const url = "https://swapi.dev/api/starships/33/"
+const url = "https://swapi.dev/api/starships/10/"
 
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended: true}))
