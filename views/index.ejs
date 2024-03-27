@@ -12,6 +12,8 @@
         <label for="planets"> planets </label>
         <input type="submit" name="planets">
     </form>
-    
+   <% if (locals.ship) { %> 
+       <h3> <%= ship %> </h3> 
+   <%  } %>
 </body>
 </html>
