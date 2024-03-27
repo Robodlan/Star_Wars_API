@@ -9,7 +9,7 @@ const url = "https://swapi.dev/api/planets/1/"
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended: true}))
 
-app.get("/", async (req, res) => {
+app.get("/", (req, res) => {
   try {
    res.render("index.ejs", { data: "Show Planet" });
   } catch (error) {
@@ -22,10 +22,9 @@ app.get("/", async (req, res) => {
 
 app.post("/", async (req, res) => {
   try {
-    const response = await axios.post(url);
-    console.log(req.body)
-    const result = response.data;
-    res.render("index.ejs", { data: JSON.stringify(result) });
+    const result = await axios.get(url);
+    console.log(result.data.name);
+    res.render("index.ejs");
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
