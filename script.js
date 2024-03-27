@@ -4,7 +4,7 @@ import axios from "axios";
 
 const app = express()
 const port = 3000;
-const url = "https://swapi.dev/api/starships/9/"
+const url = "https://swapi.dev/api/starships/33/"
 
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended: true}))
@@ -25,7 +25,7 @@ app.post("/", async (req, res) => {
     const result = await axios.get(url);
     console.log(result.data);
     res.render("index.ejs", {
-      ship: result.data.name
+      ship: result.data
     });
   } catch (error) {
     console.error("Failed to make request:", error.message);

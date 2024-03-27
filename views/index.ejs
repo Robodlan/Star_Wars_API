@@ -9,11 +9,14 @@
 <body>
   <h1>Star Wars-API</h1>
     <form action="/"  method="post" >
-        <label for="planets"> planets </label>
+        <label for="planets"> StarShips </label>
         <input type="submit" name="planets">
     </form>
    <% if (locals.ship) { %> 
-       <h3> <%= ship %> </h3> 
+       <h1>Name: <%= ship.name %> </h1>
+       <h2>Model: <%= ship.model %></h2> 
+       <p>Manufacturer: <%= ship.manufacturer %> </p>
+       <p>Cost: <%= ship.cost_in_credits %> </p>
    <%  } %>
 </body>
 </html>
