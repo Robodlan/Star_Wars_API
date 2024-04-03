@@ -23,6 +23,11 @@ input {
     padding: 0.2em;
 }
 
+.title {
+    border: 3px solid yellow;
+    padding: 1.5em;
+}
+
 .container {
     border: 1px solid #333;
     color: #333;
