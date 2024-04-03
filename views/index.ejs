@@ -12,11 +12,13 @@
         <label for="planets"> StarShips </label>
         <input type="submit" name="planets">
     </form>
-   <% if (locals.ship) { %> 
-       <h1>Name: <%= ship.name %> </h1>
-       <h2>Model: <%= ship.model %></h2> 
-       <p>Manufacturer: <%= ship.manufacturer %> </p>
-       <p>Cost: <%= ship.cost_in_credits %> </p>
-   <%  } %>
+    <div class="container" >
+        <% if (locals.ship) { %> 
+            <h1>Name: <%= ship.name %> </h1>
+            <h2>Model: <%= ship.model %></h2> 
+            <p>Manufacturer: <%= ship.manufacturer %> </p>
+            <p>Cost: <%= ship.cost_in_credits %> </p>
+        <%  } %>
+    </div>
 </body>
 </html>
