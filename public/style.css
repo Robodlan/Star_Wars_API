@@ -18,9 +18,10 @@ form {
     margin: 1em;
 }
 
-input {
-    margin: 0.5em;
-    padding: 0.2em;
+button {
+    width: 20em;
+    padding: 0.9em;
+    border: 1px solid #252525;
 }
 
 .title {
