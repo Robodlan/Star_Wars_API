@@ -86,8 +86,9 @@ form {
 }
 
 button {
-    width: 20em;
-    padding: 0.9em;
+    width: 10em;
+    padding: 1em;
+    border-radius: 2em;
     border: 1px solid #252525;
     font-family: "Lato", sans-serif;
     font-weight: 400;
