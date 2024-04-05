@@ -4,14 +4,14 @@ import axios from "axios";
 
 const app = express()
 const port = 3000;
-const url = "https://swapi.dev/api/starships/10/"
+const url = "https://swapi.dev/api/planets/"
 
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.get("/", (req, res) => {
   try {
-   res.render("index.ejs", { data: "Starships" });
+    res.render("index.ejs", { data: "Planets" });
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
