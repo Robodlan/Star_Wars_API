@@ -4,14 +4,16 @@ import axios from "axios";
 
 const app = express()
 const port = 3000;
-const url = "https://swapi.dev/api/planets/"
+const url = "https://swapi.dev/api/planets/?page=1/"
 
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended: true}))
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
   try {
-    res.render("index.ejs", { data: "Planets" });
+    const result = await axios.get(url)
+    console.log(`${result.data.results}`)
+    res.render("index.ejs", { data: result.data.name });
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
@@ -23,7 +25,7 @@ app.get("/", (req, res) => {
 app.post("/", async (req, res) => {
   try {
     const result = await axios.get(url);
-    console.log(result.data);
+    // console.log(result.data);
     res.render("index.ejs", {
       ship: result.data
     });

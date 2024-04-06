@@ -15,12 +15,14 @@
 
 <body>
     <h1 class="title">Star Wars-API</h1>
+    <h3>Planets</h3>
+    <h4><%= locals.data %></h4>
     <form action="/" method="post">
         <label for="planets"> Item </label>
         <button name="planets">Button</button>
     </form>
     <div class="container">
-         <p><%= locals.data %></p>
+         
         <% if (locals.ship) { %>
             <h2>Name: <%= ship.name %>
             </h2>
