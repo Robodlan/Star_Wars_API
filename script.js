@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.get("/", async (req, res) => {
   try {
     const result = await axios.get(url)
-    console.log(result.data)
+    console.log(result.data.results)
     res.render("index.ejs", { data: result.data });
   } catch (error) {
     console.error("Failed to make request:", error.message);
