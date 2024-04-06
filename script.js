@@ -13,7 +13,7 @@ app.get("/", async (req, res) => {
   try {
     const result = await axios.get(url)
     console.log(result.data)
-    res.render("index.ejs", { data: result.dat });
+    res.render("index.ejs", { data: result.data });
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
