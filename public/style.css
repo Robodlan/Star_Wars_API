@@ -98,6 +98,10 @@ button {
     background-color: #272b30;
     border: 1px solid yellow;
 }
+button:hover,
+button:focus {
+  
+}
 
 .title {
     padding: 1.5em;
