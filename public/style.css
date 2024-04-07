@@ -100,7 +100,8 @@ button {
 }
 button:hover,
 button:focus {
-  
+  border-color: yellow;
+  color: #252525;
 }
 
 .title {
