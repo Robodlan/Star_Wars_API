@@ -96,6 +96,7 @@ button {
     color: yellow;
     background-color: #272b30;
     border: 1px solid yellow;
+    cursor: pointer;
 }
 button:hover,
 button:focus {
